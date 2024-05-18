@@ -9,3 +9,12 @@ The largest model (`CIFAR100_resnet_super.onnx`) was removed. The TinyImageNet m
 CIFAR100 images are 32x32x3 (same as CIFAR10), and the models contain FC, conv, and ReLU layers only.
 
 For more information about the models, you can check out the original repo in 2022 (here, we only kept the `CIFAR100_resnet_medium` and `CIFAR100_resnet_large` models; other models were removed to reduce complexity).
+
+### Setup 
+
+PyTorch is required, which can be installed by `pip install torch`.
+
+To generate specficiations:
+```bash
+python generate_properties.py SEED
+```
