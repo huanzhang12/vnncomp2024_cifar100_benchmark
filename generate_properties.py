@@ -153,7 +153,7 @@ def create_vnnlib(args, dataset):
                 vnnlib_path, f"{args.timeout}"])
             cnt += 1
 
-    assert os.path.exists(f"./generated_vnnlib/")
+    assert os.path.exists(f"./vnnlib/")
 
     with open(f'./instances.csv', 'a') as f:
         write = csv.writer(f)
@@ -165,7 +165,7 @@ if __name__ == '__main__':
     args = parser.parse_args()
     args.epsilons = "1/255"
     args.mode = "generate_vnnlib_csv"
-    vnnlib_path = "generated_vnnlib"
+    vnnlib_path = "vnnlib"
     if not os.path.exists(vnnlib_path):
         os.makedirs(vnnlib_path)
     # Remove old files in the vnnlib folder.
